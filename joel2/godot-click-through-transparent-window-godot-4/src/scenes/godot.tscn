@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wy75x8vwgq6r"]
+
+[ext_resource type="Script" uid="uid://b0sh4l0jp11ng" path="res://src/scenes/godot.gd" id="1_5067l"]
+[ext_resource type="Texture2D" uid="uid://bs4jn1tvv01ow" path="res://src/scenes/jellyjig_gigglemoon.png" id="1_rsqye"]
+
+[node name="Godot" type="Sprite2D"]
+texture = ExtResource("1_rsqye")
+script = ExtResource("1_5067l")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="ClickPolygon" type="CollisionPolygon2D" parent="ClickArea"]
+unique_name_in_owner = true
+polygon = PackedVector2Array(-98, -62, 108, -64, 104, 63, -98, 65)
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

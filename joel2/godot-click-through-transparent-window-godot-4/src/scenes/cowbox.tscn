@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsjm60s1qmlw2"]
+
+[ext_resource type="Script" uid="uid://bh6kvjiex0q7l" path="res://cowbox.gd" id="1_jy33d"]
+[ext_resource type="Texture2D" uid="uid://cix37vegxgks0" path="res://src/scenes/derpy2289 joel main joel2-Joel_Assets_Shoot Animation/box_shoot0000.png" id="2_dp7iy"]
+[ext_resource type="Script" uid="uid://bokqt4masbcly" path="res://src/scenes/canvas.gd" id="3_dp7iy"]
+
+[node name="Cowbox" type="Sprite2D"]
+position = Vector2(0, 4)
+texture = ExtResource("2_dp7iy")
+script = ExtResource("1_jy33d")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(3.99999, -34)
+scale = Vector2(21.1, 26)
+script = ExtResource("3_dp7iy")
+
+[node name="cowbox_poly" type="CollisionPolygon2D" parent="Area2D"]
+unique_name_in_owner = true
+position = Vector2(0.521327, 0.653846)
+polygon = PackedVector2Array(-10.4265, -4, 10.1896, -4.15385, 9.81043, 9.38462, -10.3791, 9.96154)
